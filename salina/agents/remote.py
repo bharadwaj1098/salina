@@ -79,15 +79,16 @@ class RemoteAgent(Agent):
         self.process.daemon = False
         self.process.start()
         r = self.o_queue.get()
+        self.train(self.train_mode)
 
     def __call__(self, workspace, **kwargs):
         with torch.no_grad():
             assert (
                 workspace.is_shared
             ), "You must use a shared workspace when using a Remote Agent"
-            if self.process is None:
-                self._create_process()
-                self.train(self.train_mode)
+            if self.process is None:                
+                self._create_process()                
+                
             if not workspace == self.last_workspace:
                 self.i_queue.put(("go_new_workspace", workspace, kwargs))
                 self.last_workspace = workspace
