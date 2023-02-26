@@ -1,9 +1,12 @@
 logger:
-  classname: salina.logger.TFLogger
-  log_dir: ./bc
-  modulo: 1
-  every_n_seconds: 10
-  verbose: True
+  classname: salina.logger.WandbLogger
+  project: test
+  group: ${now:%Y-%m-%d_}
+  job_type: test
+  tags: test
+  every_n_seconds: 30
+  verbose: False
+  log_loss: True
 
 n_envs: 1
 env_name: hopper-medium-replay-v2
