@@ -18,7 +18,7 @@ Make sure you have [pytorch installed with cuda>11.0](https://pytorch.org/) and 
 ## Get started
 Simply run the file `run.py` with the desired config available in [configs](salina/salina_cl/configs/). You can select one of them with the flag `-cn=my_config`. Different scenarios are available in [configs/scenario](salina/salina_cl/configs/scenario/). Simply add `scenario=my_scenario` as an argument. For example if you want to run the CSP method on the forgetting scenario of halfcheetah:
  ```console
-python run.py -cn=csp scenario=halfcheetah/forgetting_short
+python run.py -cn=csp scenario=halfcheetah/forgetting
 ```
 
 ## Organization of salina_cl
