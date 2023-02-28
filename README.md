@@ -1,6 +1,6 @@
 # SaLinA: SaLinA - A Flexible and Simple Library for Learning Sequential Agents (including Reinforcement Learning)
 
-**Documentation**:[Read the docs](https://salina.readthedocs.io/en/latest/)
+**Documentation**: [Read the docs](https://salina.readthedocs.io/en/latest/)
 
 ## TL;DR.
 
@@ -8,7 +8,7 @@
 * It allows to write very complex sequential models (or policies) in few lines
 * It works on multiple CPUs and GPUs
 
-# Citing `salina`
+## Citing `salina`
 
 Please use this bibtex if you want to cite this repository in your publications:
 
@@ -31,7 +31,7 @@ Link to the paper: [SaLinA: Sequential Learning of Agents](https://arxiv.org/abs
 * October 2021:
   * Include [Decision Transformers](https://arxiv.org/abs/2106.01345)
   * Include ["A Simple Way to Initialize Recurrent Networks of Rectified Linear Units"](https://arxiv.org/abs/1504.00941)
-  * **FIX: ** To avoid compatibility issues with openAI gym, the `salina/agents/gym.py` file as been renamed as `salina/agents/gyma.py`
+  * FIX: To avoid compatibility issues with openAI gym, the `salina/agents/gym.py` file as been renamed as `salina/agents/gyma.py`
   * Updated documentation
   * [Transformer-based Agents](salina/agents/transformers.py)
   * Behavioral Cloning over complete episodes [with](salina_examples/offline_rl/bc_on_full_episodes/gym_transformer.yaml) and [without](salina_examples/offline_rl/bc_on_full_episodes/gym.yaml) transformers.
@@ -47,7 +47,7 @@ Link to the paper: [SaLinA: Sequential Learning of Agents](https://arxiv.org/abs
 * Just clone the repo
 * `pip install -e .`
 
-### Documentation
+## Documentation
 
 * [Read the docs](https://salina.readthedocs.io/en/latest/)
 * [Principles of the library](md_docs/)
@@ -55,10 +55,10 @@ Link to the paper: [SaLinA: Sequential Learning of Agents](https://arxiv.org/abs
 * [Tutorial through multiple A2C implementations](salina_examples/rl/a2c)
 * [Reinforcement Learning Benchmark](salina_examples/rl/BENCHMARK.md)
 * Video Tutorials:
-* * [Tutorial 1: Agent and Workspace](https://youtu.be/CSkkoq_k5zU)
-* * [Tutorial 2: Multi-CPUs](https://youtu.be/I-trJWUJDMo)
-* * [Tutorial 3: Implementing A2C](https://youtu.be/Mec8GEEQYhU)
-* * [Tutorial 4: A2C on multi-CPUs](https://youtu.be/euDqlmcC_1Q)
+  * [Tutorial 1: Agent and Workspace](https://youtu.be/CSkkoq_k5zU)
+  * [Tutorial 2: Multi-CPUs](https://youtu.be/I-trJWUJDMo)
+  * [Tutorial 3: Implementing A2C](https://youtu.be/Mec8GEEQYhU)
+  * [Tutorial 4: A2C on multi-CPUs](https://youtu.be/euDqlmcC_1Q)
 * [Arxiv Paper](https://arxiv.org/abs/2110.07910)
 
 ## A note on transformers
@@ -95,7 +95,7 @@ The table contains the number of transitions processed per second (during learni
 
 We provide a simple Logger that logs in both tensorboard format, but also as pickle files that can be re-read to make tables and figures. See [logger](salina/logger.py). This logger can be easily replaced by any other logger.
 
-# Description
+## Description
 
 **Sequential Decision Making is much more than Reinforcement Learning**
 
@@ -107,7 +107,7 @@ We provide a simple Logger that logs in both tensorboard format, but also as pic
  * Interaction between multiple entities (e.g multi-agent RL)
 
 
-## What `salina` is
+### What `salina` is
 
 * A sandbox for developping sequential models at scale.
 
@@ -116,14 +116,14 @@ We provide a simple Logger that logs in both tensorboard format, but also as pic
 * A set of **agents** that can be combined (like pytorch modules) to obtain complex behaviors
 * A set of references implementations and examples in different domains **Reinforcement Learning**, **Imitation Learning**, **Computer Vision**, with more to come...
 
-## What `salina` is not
+### What `salina` is not
 
 * Yet another reinforcement learning framework: `salina` is focused on **sequential decision making in general**. It can be used for RL (which is our main current use-case), but also for supervised learning, attention models, multi-agent learning, planning, control, cascade models, recommender systems, among other use cases.
 * A `library`: salina is just a small layer on top of pytorch that encourages good practices for implementing sequential models. Accordingly, it is very simple to understand and use, while very powerful.
 
 
 
-# Papers using SaLinA:
+## Papers using SaLinA:
 * Learning a subspace of policies for online adaptation in Reinforcement Learning. Jean-Baptiste Gaya, Laure Soulier, Ludovic Denoyer - [Arxiv](https://arxiv.org/abs/2110.05169)
 * Direct then Diffuse: Incremental Unsupervised Skill Discovery for State Covering and Goal Reaching. Pierre-Alexandre Kamienny, Jean Tarbouriech, Alessandro Lazaric, Ludovic Denoyer - [Arxiv](https://arxiv.org/abs/2110.14457)
 
