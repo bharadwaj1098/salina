@@ -12,16 +12,3 @@ job:
       item_sep: /
       exclude_keys:
         - seed
-launcher:
-  mem_gb: 16
-  max_num_timeout: 0
-  cpus_per_task: 1
-  signal_delay_s: 30
-  timeout_min: 1200
-  gpus_per_node: 1
-  tasks_per_node: 1
-  partition: learnlab
-  comment: ICLR23
-job_logging:
-  root:
-    handlers: []

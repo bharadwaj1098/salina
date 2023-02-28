@@ -14,7 +14,7 @@ from salina.agents import Agents, TemporalAgent
 from salina.agents.brax import EpisodesDone
 from torch.distributions.dirichlet import Dirichlet
 
-from crl.core import Framework
+from salina_cl.core import Framework
 
 
 def get_checkpoint(path, keyword="policy_"):

@@ -1,4 +1,4 @@
-classname: crl.frameworks.Subspace
+classname: salina_cl.frameworks.Subspace
 seed: ${seed}
 params:
   checkpoint: True
@@ -13,7 +13,7 @@ params:
   lr_scaling:  0. #scaling of the lr * nb_anchors
 
   algorithm:
-    classname: crl.algorithms.SAC
+    classname: salina_cl.algorithms.SAC
     params:
       learning_device: cuda:0
       acquisition_device: cuda:0
@@ -57,7 +57,7 @@ params:
       initial_buffer_size: 12_800
 
   alpha_search:
-    classname: crl.algorithms.AlphaSearch
+    classname: salina_cl.algorithms.AlphaSearch
     params:
       device: cuda:0
       n_estimations: 1024
@@ -68,7 +68,7 @@ params:
       n_validation_steps: 1000
 
   policy_agent:
-    classname: crl.agents.SubspaceActionAgent
+    classname: salina_cl.agents.SubspaceActionAgent
     hidden_size: 256
     input_dimension: nil
     output_dimension: nil
@@ -80,7 +80,7 @@ params:
     repeat_alpha: 250
 
   critic_agent:
-    classname: crl.agents.AlphaTwinCritics
+    classname: salina_cl.agents.AlphaTwinCritics
     hidden_size: 256
     obs_dimension: nil
     action_dimension: nil

@@ -1,5 +1,5 @@
 name: forgetting
-classname: crl.scenarios.BraxScenario
+classname: salina_cl.scenarios.BraxScenario
 domain: halfcheetah
 tasks: ["hugefoot","moon","carry_stuff","rainfall"]
 repeat_scenario: 2

@@ -1,4 +1,4 @@
-classname: crl.logger.WandbLogger
+classname: salina_cl.logger.WandbLogger
 project: ${scenario.domain}_${scenario.name}
 group: ${now:%Y-%m-%d_}
 job_type: ${name}

@@ -1,4 +1,4 @@
-classname: crl.algorithms.SAC
+classname: salina_cl.algorithms.SAC
 params:
   learning_device: cuda:0
   acquisition_device: cuda:0

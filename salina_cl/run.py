@@ -1,37 +1,24 @@
 import time
 
-#
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-#
 import hydra
 import torch
-from salina import instantiate_class
 
-from .logger import process_cfg, process_cfg_csp
+from salina import instantiate_class
 
 
 @hydra.main(config_path="configs/", config_name="csp.yaml")
 def main(cfg):
     _start = time.time()
-    if "path" in cfg.model.params:
-        if "csp" in cfg.name:
-            cfg = process_cfg_csp(cfg)
-        else:
-            cfg = process_cfg(cfg)
-
     logger = instantiate_class(cfg.logger)
     logger.save_hps(cfg, verbose =False)
-    model = instantiate_class(cfg.model)
+    framework = instantiate_class(cfg.framework)
     scenario = instantiate_class(cfg.scenario)
     #logger_evaluation = logger.get_logger("evaluation/")
     #logger_evaluation.logger.modulo = 1
-    stage = model.get_stage()
+    stage = framework.get_stage()
     for train_task in scenario.train_tasks()[stage:]:
-        model.train(train_task,logger)
-        evaluation = model.evaluate(scenario.test_tasks(),logger)
+        framework.train(train_task,logger)
+        evaluation = framework.evaluate(scenario.test_tasks(),logger)
         metrics = {}
         for tid in evaluation:
             for k,v in evaluation[tid].items():
@@ -39,7 +26,7 @@ def main(cfg):
                 metrics[k] = v + metrics.get(k,0)
         for k,v in metrics.items():
             logger.add_scalar("evaluation/aggregate_"+k,v / len(evaluation),stage)
-        m_size = model.memory_size()
+        m_size = framework.memory_size()
         for k,v in m_size.items():
             logger.add_scalar("memory/"+k,v,stage)
         stage+=1

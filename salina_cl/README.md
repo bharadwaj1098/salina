@@ -6,6 +6,15 @@ SaLinA Continual Reinforcement Learning framework with multiple scenarios and me
 ![Alt Text](assets/distraction.gif)
 ![Alt Text](assets/composability.gif)
 
+## Requirements
+Make sure you have [pytorch installed with cuda>11.0](https://pytorch.org/) and followed [instructions to install SaLinA](https://github.com/facebookresearch/salina#quick-start). In addition:
+* additional packages: `pip install wandb ternary hydra`
+* In order to install brax, we recommend to run the following installations:
+  * jax+jaxlib: `pip install --upgrade "jax[cuda]==0.3.25" -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html`
+  * flax: `pip install flax==0.3.4`
+  * brax: `pip install brax`
+  * /!\ we recommend you to use cuda/11.4 version (check it with `nvcc --version`).
+
 ## Get started
 Simply run the file `run.py` with the desired config available in [configs](salina/salina_cl/configs/). You can select one of them with the flag `-cn=my_config`. Different scenarios are available in [configs/scenario](salina/salina_cl/configs/scenario/). Simply add `scenario=my_scenario` as an argument. For example if you want to run the CSP method on the forgetting scenario of halfcheetah:
  ```console
@@ -16,16 +25,16 @@ python run.py -cn=csp scenario=halfcheetah/forgetting_short
 
 The `core.py` file contains the building blocks of this framework. Each experiment consists in running a `Framework` over a `Scenario`, i.e. a sequence of train and test `Task`. The models are learning procedures that use salina agents to interact with the tasks and learn from them through one or multiple algorithms.
 
-* [frameworks](crl/frameworks/) contains generic learning procedures (e.g. using only one algorithm, or adding a regularization method in the end)
-* [scenarios](crl/scenarios/) contains CRL scenarios i.e sequence of train and test tasks
-* [algorithms](crl/algorithms/) contains different RL / CL algorithms (ppo, sac, td3, ewc regularization)
-* [agents](crl/agents/) contains salina agents (policy, critic, ...)
-* [configs](crl/configs/) contains the configs files of benchmarked methods/scenarios.
+* [frameworks](frameworks/) contains generic learning procedures (e.g. using only one algorithm, or adding a regularization method in the end)
+* [scenarios](scenarios/) contains CRL scenarios i.e sequence of train and test tasks
+* [algorithms](algorithms/) contains different RL / CL algorithms (ppo, sac, td3, ewc regularization)
+* [agents](agents/) contains salina agents (policy, critic, ...)
+* [configs](configs/) contains the configs files of benchmarked methods/scenarios.
 
 
 ## Available methods
 
-We implmented 8 different methods all built on top of soft-actor critic algorithm. To try them, just add the flag `-cn=my_method` on the command line. You can find the hps in [configs](crl/configs):
+We implmented 8 different methods all built on top of soft-actor critic algorithm. To try them, just add the flag `-cn=my_method` on the command line. You can find the hps in [configs](configs):
 
 * `csp`: Continual Subspace of Policies from [Building a subspace of Policies for scalable Continual Learning](https://arxiv.org/abs/2110.07910)
 

@@ -10,4 +10,3 @@ defaults:
   - hydra: hydra
   - framework/params/csp
   - optional framework: ${scenario}_csp
-  - override hydra/launcher: submitit_slurm

@@ -12,7 +12,7 @@ from salina.agents import Agents, TemporalAgent
 from ternary.helpers import simplex_iterator
 from torch.distributions.dirichlet import Dirichlet
 
-from crl.agents.tools import LinearSubspace
+from salina_cl.agents.tools import LinearSubspace
 
 
 def remove_anchor(model):

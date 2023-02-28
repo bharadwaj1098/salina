@@ -13,20 +13,19 @@ defaults:
   - optional framework/params/algorithm: ${scenario} # best HPS for sac are loaded if available
   - optional framework/params/policy_agent: ${scenario} # using layer norm and random policy warmup if CW
   - optional framework/params/critic_agent: ${scenario} # using layer norm if CW
-  - override hydra/launcher: submitit_slurm
 
 frameowkr:
-  classname: crl.frameworks.TwoSteps
+  classname: salina_cl.frameworks.TwoSteps
   seed: ${seed}
   params:
     checkpoint: False
 
     algorithm2:
-      classname: crl.algorithms.EWC
+      classname: salina_cl.algorithms.EWC
       params:
         device: cuda:0
         n_samples: 1024
         
     policy_agent:
-      classname: crl.agents.EWCActionAgent
+      classname: salina_cl.agents.EWCActionAgent
       fisher_coeff: 1. # 0.01,1.,100.,10000.

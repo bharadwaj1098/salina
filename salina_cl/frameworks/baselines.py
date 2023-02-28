@@ -10,7 +10,7 @@ import re
 import torch
 from salina import instantiate_class
 
-from crl.core import Framework
+from salina_cl.core import Framework
 
 
 def get_checkpoint(path, keyword="policy_"):

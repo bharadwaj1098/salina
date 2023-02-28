@@ -8,7 +8,7 @@ import typing as tp
 
 import jax
 from brax.envs import Env as BraxEnv, wrappers
-from crl.core import Scenario, Task
+from salina_cl.core import Scenario, Task
 
 from .brax.ant import Ant
 from .brax.halfcheetah import Halfcheetah
@@ -65,7 +65,7 @@ class BraxScenario(Scenario):
         print("Scenario:",tasks)
         for k,task in enumerate(tasks):
             agent_cfg={
-                "classname":"crl.agents.AutoResetBraxAgent",
+                "classname":"salina_cl.agents.AutoResetBraxAgent",
                 "make_env_fn":make_brax_env,
                 "make_env_args":{
                                 "domain":domain,
@@ -75,7 +75,7 @@ class BraxScenario(Scenario):
             }
             self._train_tasks.append(Task(agent_cfg,k,n_steps))
             test_cfg={
-                "classname":"crl.agents.NoAutoResetBraxAgent",
+                "classname":"salina_cl.agents.NoAutoResetBraxAgent",
                 "make_env_fn":make_brax_env,
                 "make_env_args":{
                                 "domain":domain,

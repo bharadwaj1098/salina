@@ -1,5 +1,5 @@
 name: composability
-classname: crl.scenarios.BraxScenario
+classname: salina_cl.scenarios.BraxScenario
 domain: ant
 tasks: ["disabled_hard1","disabled_hard2","disabled_forefeet","disabled_backfeet"]
 repeat_scenario: 2

@@ -1,17 +1,12 @@
-#
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
-# This source code is licensed under the MIT license found in the
-# LICENSE file in the root directory of this source tree.
-#
+import typing as tp
+
 import salina
-from salina import instantiate_class
 import torch
 import torch.utils.data
-from salina.agents import Agents,TemporalAgent
+from salina import Agent, Workspace, instantiate_class
+from salina.agents import Agents, TemporalAgent
 from salina.agents.brax import EpisodesDone
-from salina import Workspace,Agent
-import typing as tp
+
 
 class Task:
     """A Reinforcement Learning task defined as a SaLinA agent. Use make() method
@@ -81,7 +76,7 @@ class Scenario:
 
 
 
-class Model:
+class Framework:
     """A (CRL) Model can be updated over one new task, and evaluated over any task
     
     Parameters

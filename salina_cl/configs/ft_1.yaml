@@ -12,12 +12,11 @@ defaults:
   - optional framework/params/algorithm: ${scenario} # best HPS for sac are loaded if available
   - optional framework/params/policy_agent: ${scenario} # using layer norm and random policy warmup if CW
   - optional framework/params/critic_agent: ${scenario} # using layer norm if CW
-  - override hydra/launcher: submitit_slurm
 
 framework:
-  classname: crl.frameworks.OneStep
+  classname: salina_cl.frameworks.OneStep
   seed: ${seed}
   params:
     checkpoint: False
     policy_agent:
-      classname: crl.agents.ActionAgent
+      classname: salina_cl.agents.ActionAgent

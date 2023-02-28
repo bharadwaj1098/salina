@@ -1,5 +1,5 @@
 name: hard
-classname: crl.scenarios.BraxScenario
+classname: salina_cl.scenarios.BraxScenario
 domain: humanoid
 tasks: ["normal","moon","carrystuff","tinyfeet"]
 repeat_scenario: 2

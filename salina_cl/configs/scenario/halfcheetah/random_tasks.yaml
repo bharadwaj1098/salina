@@ -1,5 +1,5 @@
 name: random_tasks
-classname: crl.scenarios.BraxScenario
+classname: salina_cl.scenarios.BraxScenario
 domain: halfcheetah
 tasks: ['tinyfoot','normal','hugefoot_rainfall','moon','defective_module','carry_stuff_hugegravity','rainfall','hugefoot','tinyfoot_moon','carry_stuff']
 repeat_scenario: 1

@@ -4,7 +4,7 @@
 # This source code is licensed under the MIT license found in the
 # LICENSE file in the root directory of this source tree.
 #
-from crl.core import CRLAgents
+from salina_cl.core import CRLAgents
 
 from .brax_agents import *
 from .packnet_agents import *

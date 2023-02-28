@@ -10,8 +10,8 @@ import torch.nn.functional as F
 from torch import nn
 from torch.distributions.categorical import Categorical
 
-from ..core import CRLAgent, CRLAgents
-from .tools import *
+from salina_cl.core import CRLAgent, CRLAgents
+from salina_cl.agents.tools import *
 
 
 class SubspaceAgents(CRLAgents):

@@ -1,4 +1,4 @@
-classname: crl.algorithms.PruneAndFinetune
+classname: salina_cl.algorithms.PruneAndFinetune
 params:
   device: cuda:0
 
