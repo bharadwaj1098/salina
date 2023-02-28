@@ -1,3 +1,9 @@
+#
+# Copyright (c) Facebook, Inc. and its affiliates.
+#
+# This source code is licensed under the MIT license found in the
+# LICENSE file in the root directory of this source tree.
+#
 #This file correct a bug in the jaxtotorchwrapper of the current brax version 
 
 from typing import Optional, Union
