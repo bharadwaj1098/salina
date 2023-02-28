@@ -27,25 +27,20 @@ Link to the paper: [SaLinA: Sequential Learning of Agents](https://arxiv.org/abs
 
 ## News
 * November 2021:
-* * Complete core documentation: [Read the docs](https://salina.readthedocs.io/en/latest/)
-
+  * Complete core documentation: [Read the docs](https://salina.readthedocs.io/en/latest/)
 * October 2021:
-* * Week 8th of November
-* * * Include [Decision Transformers](https://arxiv.org/abs/2106.01345)
-* * * Include ["A Simple Way to Initialize Recurrent Networks of Rectified Linear Units"](https://arxiv.org/abs/1504.00941)
-* * * **FIX: ** To avoid compatibility issues with openAI gym, the `salina/agents/gym.py` file as been renamed as `salina/agents/gyma.py`
-* * Week 25th of october
-* * * Updated documentation
-* * * [Transformer-based Agents](salina/agents/transformers.py)
-* * * [Behavioral Cloning over complete episodes](salina_examples/offline_rl/bc_on_full_episodes)
-* * * * [With](salina_examples/offline_rl/bc_on_full_episodes/gym_transformer.yaml) and [without](salina_examples/offline_rl/bc_on_full_episodes/gym.yaml) transformers
-* * * [PPO on Brax with Transformers](salina_examples/rl/ppo_brax_transformer)
-* * Week 18th of october
-* * * Release of the library
-* * * Various bug fixes
-* * * Add train and eval mode in the RemoteAgent and NRemoteAgent
-* * * [Cleaning of the BRAX PPO Implementation](salina_examples/rl/ppo_brax) to make it similar to other implementations
-* * * [Cleaning of the Behavioral Cloning implementation](salina_examples/offline_rl/bc)
+  * Include [Decision Transformers](https://arxiv.org/abs/2106.01345)
+  * Include ["A Simple Way to Initialize Recurrent Networks of Rectified Linear Units"](https://arxiv.org/abs/1504.00941)
+  * **FIX: ** To avoid compatibility issues with openAI gym, the `salina/agents/gym.py` file as been renamed as `salina/agents/gyma.py`
+  * Updated documentation
+  * [Transformer-based Agents](salina/agents/transformers.py)
+  * Behavioral Cloning over complete episodes [with](salina_examples/offline_rl/bc_on_full_episodes/gym_transformer.yaml) and [without](salina_examples/offline_rl/bc_on_full_episodes/gym.yaml) transformers.
+  * [PPO on Brax with Transformers](salina_examples/rl/ppo_brax_transformer)
+  * Release of the library
+  * Various bug fixes
+  * Add train and eval mode in the RemoteAgent and NRemoteAgent
+  * [Cleaning of the BRAX PPO Implementation](salina_examples/rl/ppo_brax) to make it similar to other implementations
+  * [Cleaning of the Behavioral Cloning implementation](salina_examples/offline_rl/bc)
 
 ## Quick Start
 
