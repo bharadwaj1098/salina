@@ -1,10 +1,10 @@
 # SaLinA Continual Learning framekwork (salina_cl)
 SaLinA Continual Reinforcement Learning framework with multiple scenarios and methods already implemented. It is also the codebase of the paper [Building a subspace of Policies for scalable Continual Learning](https://arxiv.org/abs/2110.07910). 
 
-![Alt Text](salina/salina_cl/assets/forgetting.gif)
-![Alt Text](salina/salina_cl/assets/transfer.gif)
-![Alt Text](salina/salina_cl/assets/distraction.gif)
-![Alt Text](salina/salina_cl/assets/composability.gif)
+![Alt Text](assets/forgetting.gif)
+![Alt Text](assets/transfer.gif)
+![Alt Text](assets/distraction.gif)
+![Alt Text](assets/composability.gif)
 
 ## Get started
 Simply run the file `run.py` with the desired config available in [configs](salina/salina_cl/configs/). You can select one of them with the flag `-cn=my_config`. Different scenarios are available in [configs/scenario](salina/salina_cl/configs/scenario/). Simply add `scenario=my_scenario` as an argument. For example if you want to run the CSP method on the forgetting scenario of halfcheetah:
