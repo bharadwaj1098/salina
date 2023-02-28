@@ -19,13 +19,15 @@ Link to the paper: [SaLinA: Sequential Learning of Agents](https://arxiv.org/abs
         author = {Ludovic Denoyer, Alfredo de la Fuente, Song Duong, Jean-Baptiste Gaya, Pierre-Alexandre Kamienny, Daniel H. Thompson},
         title = {SaLinA: Sequential Learning of Agents},
         year = {2021},
-        publisher = {Arxiv},
+        publisher = {Arxiv},salina_cl
         howpublished = {\url{https://gitHub.com/facebookresearch/salina}},
     }
 
 ```
 
 ## News
+* February 2023:
+  * Adding `salina_cl, a continual learning framework using salina. See [salina_cl](salina_cl)
 * November 2021:
   * Complete core documentation: [Read the docs](https://salina.readthedocs.io/en/latest/)
 * October 2021:
