@@ -115,6 +115,7 @@ class Ant(Ant):
 
 env_tasks = {
     "normal":{},
+    "hugefoot":{'':1.5},
     "moon":{'gravity':0.7},
     "rainfall":{'friction':0.375},
     "disabled_hard1":{"action_mask":[2,3,4,5,6,7]},
