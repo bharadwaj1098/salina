@@ -170,8 +170,6 @@ class SubspaceAction(SubspaceAgent):
                 nn.LeakyReLU(negative_slope=0.2),
                 LinearSubspace(self.n_anchors, self.hs, self.hs),
                 nn.LeakyReLU(negative_slope=0.2),
-                LinearSubspace(self.n_anchors, self.hs, self.hs),
-                nn.LeakyReLU(negative_slope=0.2),
                 LinearSubspace(self.n_anchors, self.hs, self.output_dimension * 2),
             )
 
